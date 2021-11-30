@@ -16,19 +16,30 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <script src="app.js"></script>
   </head>
   <body>
     <div class="container-flex">
-      <ul class="list-group">
-        <li class="list-group-item" id="firstDomain">First Domain</li>
-        <li class="list-group-item" id="secondDomain">Second Domain</li>
-        <li class="list-group-item" id="thirdDomain">Third Domain</li>
-        <li class="list-group-item" id="fourthDomain">Fourth Domain</li>
-        <li class="list-group-item" id="fifthDomain">Fifth Domain</li>
-        <li class="list-group-item" id="sixthDomain">Sixth Domain</li>
-        <li class="list-group-item" id="seventhDomain">Seventh Domain</li>
-        <li class="list-group-item" id="eightDomain">Eight Domain</li>
-      </ul>
+      <div class="justify-content-center">
+        <div class="row justify-content-center">
+          <ul class="list-group col-1" id="domain.results"></ul>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-1">
+          <form>
+            <input
+              type="text"
+              class="form-control"
+              id="input"
+              placeholder="Add Names"
+            />
+            <button type="button" id="add">
+              Submit Name
+            </button>
+          </div>
+          </form>
+        </div>
+      </div>
     </div>
 
     <script
