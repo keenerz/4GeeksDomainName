@@ -20,7 +20,7 @@ window.onload = function() {
     }
   }
   console.log(domainName);
-  document.getElementById("domain.results").innerHTML = domainName;
+  document.getElementById("domainresults").innerHTML = domainName;
 };
 
 let btnAdd = document.querySelector("#add");
