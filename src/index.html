@@ -17,6 +17,7 @@
       crossorigin="anonymous"
     />
     <script src="app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="container-flex">
@@ -27,9 +28,9 @@
           <ul class="list-group col-1" id="domainresults"></ul>
         </div>
         <div class="row justify-content-center">
-          <div class="col-2">
+          <div class="col-2 text-center">
             <br />
-            <form>
+            <form autocomplete="off">
               <input
                 type="text"
                 class="form-control"
@@ -40,6 +41,19 @@
                 <button type="button" id="add">
                   Submit Pronouns
                 </button>
+              </div>
+              <div class="row justify-content-center m-auto">
+                <div
+                  id="NavDropdownListContainer"
+                  style="display: block; visibility: hidden;"
+                >
+                  <div style="width: 249px;">
+                    <div class="ms-qSuggest-listItem">solution</div>
+                    <div class="ms-qSuggest-listItem">pokemon</div>
+                    <div class="ms-qSuggest-listItem">pog</div>
+                    <div class="ms-qSuggest-listItem">doop</div>
+                  </div>
+                </div>
               </div>
             </form>
           </div>

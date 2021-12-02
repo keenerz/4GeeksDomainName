@@ -35,3 +35,36 @@ btnAdd.addEventListener("click", () => {
     window.onload();
   }
 });
+
+let suggestions = ["solution", "torrent"];
+function autocompleteMatch(input) {
+  if (input == "") {
+    return [];
+  }
+  var reg = new RegExp(input);
+  return suggestions.filter(function(term) {
+    if (term.match(reg)) {
+      return term;
+    }
+  });
+}
+
+function showResults(val) {
+  res = document.getElementById("result");
+  res.innerHTML = "";
+  let list = "";
+  let terms = autocompleteMatch(val);
+  for (i = 0; i < terms.length; i++) {
+    list += "<li>" + terms[i] + "</li>";
+  }
+  res.innerHTML = "<ul>" + list + "</ul>";
+}
+
+$("#input").click(function(e) {
+  $("#NavDropdownListContainer").css("visibility", "visible");
+});
+
+$(".ms-qSuggest-listItem").click(function() {
+  $("#input").val($(this).text());
+  $("#NavDropdownListContainer").css("visibility", "hidden");
+});
